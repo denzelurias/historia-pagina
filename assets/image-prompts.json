@@ -1,0 +1,37 @@
+[
+  {
+    "id": "hero",
+    "filename": "hero-archivo-transformacion.png",
+    "placement": "hero",
+    "alt": "Composición editorial inspirada en códices, mapas y arquitectura virreinal para la portada del sitio.",
+    "prompt": "Ilustración editorial panorámica para un museo digital de historia de México. Composición sofisticada y contemplativa que combine referencias al mundo prehispánico, rutas oceánicas, arquitectura novohispana y papeles de archivo. Estética de dossier curatorial contemporáneo, papel algodón, tintas profundas verde oscuro y arcilla, luz dramática y textura sutil de grabado. No fotorealista, no estilo caricatura, no texto, no letras, no números, no marcas de agua, no objetos modernos."
+  },
+  {
+    "id": "prehispanico",
+    "filename": "prehispanico-mesoamerica-editorial.png",
+    "placement": "culturas-prehispanicas",
+    "alt": "Escena editorial inspirada en centros ceremoniales y símbolos mesoamericanos.",
+    "prompt": "Ilustración editorial de alta calidad sobre Mesoamérica prehispánica para un sitio académico. Mostrar monumentalidad arquitectónica, piedra tallada, plazas ceremoniales, relieves simbólicos y atmósfera de amanecer. Elegante, museográfica, sobria, con paleta crema, verde tinta y tonos tierra. Inspiración en grabado contemporáneo y pintura histórica refinada. No fotorealista, no personas con rasgos modernos, no texto, no letras, no iconografía inventada excesiva, no estilo videojuego."
+  },
+  {
+    "id": "global",
+    "filename": "nueva-espana-global-rutas.png",
+    "placement": "nueva-espana-global",
+    "alt": "Composición visual sobre las rutas entre Nueva España, el Atlántico y el Pacífico.",
+    "prompt": "Composición editorial horizontal sobre la Nueva España conectada con el mundo. Sugerir el Galeón de Manila, puertos, mapas náuticos, plata, cajas de mercancías finas y rutas entre el Atlántico y el Pacífico. Debe sentirse como una lámina curatorial de museo: elegante, histórica y contemporánea a la vez. Paleta en marfil, verde bosque, azul petróleo tenue y arcilla. No texto, no números, no carteles, no banderas dominantes, no apariencia infantil."
+  },
+  {
+    "id": "barroco",
+    "filename": "barroco-ilustracion-contraste.png",
+    "placement": "barroco-ilustracion",
+    "alt": "Imagen editorial que contrasta el barroco novohispano con la racionalidad ilustrada.",
+    "prompt": "Ilustración editorial para representar el contraste entre barroco e Ilustración en la Nueva España. Un lado con riqueza ornamental, retablos, velas, dorados apagados y teatralidad religiosa; el otro con gabinete de estudio, mapas, instrumentos científicos y orden geométrico. Integración sofisticada, no partida de forma obvia. Estética de revista cultural de alto nivel, textura de papel fino, colores sobrios. No texto, no números, no estilo poster escolar, no aspecto futurista."
+  },
+  {
+    "id": "misiones",
+    "filename": "misiones-jesuiticas-norte.png",
+    "placement": "misiones-jesuiticas",
+    "alt": "Representación editorial del paisaje y las misiones del norte novohispano.",
+    "prompt": "Ilustración editorial del norte novohispano y las misiones jesuíticas. Paisaje amplio y árido, arquitectura misional sobria, caminos, campanas, huertos y sensación de frontera histórica. Debe transmitir tensión entre evangelización, control territorial y paisaje vasto. Estética de archivo curado, contemporánea, elegante, con profundidad atmosférica. No fotorealista, no texto, no cruces exageradas, no estética de western, no elementos modernos."
+  }
+]

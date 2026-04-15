@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 820" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="820" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F7F2E5"/>
+      <stop offset="1" stop-color="#E3D8C7"/>
+    </linearGradient>
+    <linearGradient id="sky" x1="0" y1="0" x2="1200" y2="420" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#DCE6DA"/>
+      <stop offset="1" stop-color="#F7F2E5" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="820" fill="url(#bg)"/>
+  <rect width="1200" height="420" fill="url(#sky)"/>
+  <path d="M0 624C146 572 242 556 362 568C480 580 578 636 704 638C826 640 956 580 1200 522V820H0V624Z" fill="#D8CCB8"/>
+  <path d="M0 670C126 612 228 600 334 612C452 628 568 690 720 692C868 694 998 640 1200 586V820H0V670Z" fill="#BDAA8A"/>
+
+  <g transform="translate(348 216)">
+    <path d="M0 262H496L408 204H86L0 262Z" fill="#6F7A4A"/>
+    <path d="M62 198H432L356 144H138L62 198Z" fill="#556439"/>
+    <path d="M118 138H380L320 88H184L118 138Z" fill="#3A4A2B"/>
+    <path d="M170 82H332L260 28H236L170 82Z" fill="#24321D"/>
+    <path d="M240 0H260V34H240V0Z" fill="#934B19"/>
+    <path d="M232 262V332H264V262" fill="#24321D"/>
+    <path d="M214 332H284" stroke="#24321D" stroke-width="10"/>
+  </g>
+
+  <g opacity="0.8">
+    <circle cx="170" cy="176" r="78" stroke="#934B19" stroke-width="8"/>
+    <circle cx="170" cy="176" r="42" stroke="#934B19" stroke-width="8"/>
+    <path d="M96 176H244M170 102V250" stroke="#934B19" stroke-width="8"/>
+    <circle cx="1030" cy="166" r="62" stroke="#0E3320" stroke-width="8"/>
+    <path d="M986 122L1074 210M1074 122L986 210" stroke="#0E3320" stroke-width="8"/>
+  </g>
+
+  <g stroke="#0E3320" stroke-width="6" stroke-linecap="square">
+    <path d="M198 472L246 430L294 472L342 430L390 472"/>
+    <path d="M816 476L864 434L912 476L960 434L1008 476"/>
+    <path d="M454 540H746"/>
+  </g>
+
+  <g opacity="0.18">
+    <path d="M64 94H1136M64 734H1136M110 60V766M1090 60V766" stroke="#0E3320" stroke-width="2"/>
+  </g>
+</svg>
