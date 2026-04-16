@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Archivo de una Transformación | THE SCRIBE</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "inverse-primary": "#7b5800",
+                "on-primary-fixed": "#271900",
+                "secondary-fixed": "#cdeace",
+                "on-background": "#e5e2e1",
+                "surface": "#131313",
+                "secondary-container": "#39513c",
+                "on-surface-variant": "#c4c7c7",
+                "on-secondary-fixed": "#08200f",
+                "error-container": "#93000a",
+                "surface-dim": "#131313",
+                "primary-container": "#1b1000",
+                "on-tertiary": "#362f24",
+                "secondary": "#b2ceb3",
+                "on-secondary-container": "#a7c3a8",
+                "surface-container-lowest": "#0e0e0e",
+                "surface-container-high": "#2a2a2a",
+                "on-tertiary-container": "#857c6e",
+                "background": "#131313",
+                "surface-bright": "#3a3939",
+                "tertiary-fixed-dim": "#d1c5b5",
+                "on-secondary-fixed-variant": "#344c38",
+                "inverse-surface": "#e5e2e1",
+                "surface-tint": "#f7bd48",
+                "surface-variant": "#353534",
+                "surface-container-low": "#1c1b1b",
+                "tertiary": "#d1c5b5",
+                "error": "#ffb4ab",
+                "surface-container-highest": "#353534",
+                "tertiary-container": "#161108",
+                "secondary-fixed-dim": "#b2ceb3",
+                "outline-variant": "#444748",
+                "primary-fixed-dim": "#f7bd48",
+                "inverse-on-surface": "#313030",
+                "on-primary-container": "#a37500",
+                "outline": "#8e9192",
+                "on-surface": "#e5e2e1",
+                "on-secondary": "#1e3623",
+                "on-tertiary-fixed-variant": "#4d463a",
+                "primary": "#f7bd48",
+                "surface-container": "#201f1f",
+                "on-primary-fixed-variant": "#5d4200",
+                "primary-fixed": "#ffdea6",
+                "on-error": "#690005",
+                "tertiary-fixed": "#ede1d0",
+                "on-primary": "#412d00",
+                "on-error-container": "#ffdad6",
+                "on-tertiary-fixed": "#211b11"
+            },
+            "borderRadius": {
+                "DEFAULT": "0px",
+                "lg": "0px",
+                "xl": "0px",
+                "full": "9999px"
+            },
+            "fontFamily": {
+                "headline": ["Newsreader", "serif"],
+                "body": ["Manrope", "sans-serif"],
+                "label": ["Manrope", "sans-serif"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            font-family: 'Manrope', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .serif-display {
+            font-family: 'Newsreader', serif;
+        }
+        .glass-panel {
+            background: rgba(32, 31, 31, 0.8);
+            backdrop-filter: blur(24px);
+        }
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0e0e0e;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #f7bd48;
+        }
+    </style>
+</head>
+<body class="bg-surface selection:bg-primary selection:text-on-primary">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full flex justify-between items-center px-8 py-6 max-w-full bg-neutral-950/80 backdrop-blur-xl z-50">
+<div class="text-2xl font-serif italic text-amber-400 tracking-tighter">THE SCRIBE</div>
+<div class="hidden md:flex items-center space-x-12">
+<a class="font-serif newsreader tracking-tight text-neutral-400 hover:text-neutral-100 transition-colors duration-300" href="#">Collections</a>
+<a class="font-serif newsreader tracking-tight text-amber-400 border-b border-amber-400 pb-1" href="#">Exhibits</a>
+<a class="font-serif newsreader tracking-tight text-neutral-400 hover:text-neutral-100 transition-colors duration-300" href="#">Timeline</a>
+<a class="font-serif newsreader tracking-tight text-neutral-400 hover:text-neutral-100 transition-colors duration-300" href="#">Archive</a>
+</div>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-amber-400 cursor-pointer scale-98 transition-transform duration-200" data-icon="menu">menu</span>
+</div>
+</nav>
+<main class="pt-24 min-h-screen">
+<!-- Hero Section: Archivo de una Transformación -->
+<section class="relative h-[819px] flex items-end px-12 pb-24 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-40 mix-blend-luminosity grayscale" data-alt="Close-up of ancient handwritten manuscript with feathered quill ink on aged parchment in dark moody atmospheric lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALr-E8d4FeMMaVO0sU7uy0pE1KKIxc79ZZroZH6t_gE63aIClhivy1wHJFswd8Jywvu_9ZNn29gjdcvjKyW2NtKaswFvanxtWT6wO8P8fzZz-KdAOy9l2UBYLdUCYesulEMbDM4lB9Bb06cTg31uDConQudDhGOnIcyaa-IY8AXhdFDHOXMsNlPmCaH9L6lezCTQP0pItNrUKERShR-V_9gjPQrw0zAH-vxQRGfMXdYhi71SjT2UCSpj4M_rj7jJHFpGYWhhqZ6w"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-surface/40 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-4xl">
+<p class="text-primary font-label text-[10px] tracking-widest uppercase mb-4">Current Exhibition</p>
+<h1 class="serif-display text-7xl md:text-8xl font-light tracking-tighter text-on-surface leading-[0.9] mb-8">
+                    Archivo de una <br/><span class="italic text-primary">Transformación</span>
+</h1>
+<p class="text-on-surface-variant max-w-xl font-body text-lg leading-relaxed">
+                    Explore the metamorphosis of the modern state through its most intimate records. A curated journey into the structural evolution of society, power, and identity.
+                </p>
+</div>
+</section>
+<!-- Visual Timeline: The Ledger -->
+<section class="py-32 px-12 bg-surface-container-lowest">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+<div class="md:col-span-3">
+<div class="sticky top-32">
+<span class="text-primary font-label text-[10px] tracking-widest uppercase">Chronicle</span>
+<h2 class="serif-display text-4xl mt-4 leading-tight">Visual Timeline</h2>
+<p class="text-on-tertiary-container font-body text-sm mt-6 leading-relaxed">
+                            Tracing the threads of history through chronological inflection points that redefined the landscape of governance.
+                        </p>
+</div>
+</div>
+<div class="md:col-span-9 space-y-1">
+<!-- Timeline Item -->
+<div class="group grid grid-cols-1 md:grid-cols-4 items-center bg-surface-container-low hover:bg-surface-container-high transition-all duration-500 py-12 px-8">
+<div class="text-primary font-headline text-5xl font-extralight italic">1789</div>
+<div class="md:col-span-2">
+<h3 class="serif-display text-2xl text-on-surface">The Great Dissolution</h3>
+<p class="text-on-surface-variant font-body text-sm mt-2">Dismantling of the feudal structures and the birth of civil registries.</p>
+</div>
+<div class="flex justify-end">
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+<!-- Timeline Item -->
+<div class="group grid grid-cols-1 md:grid-cols-4 items-center bg-surface-container-low hover:bg-surface-container-high transition-all duration-500 py-12 px-8 border-t border-outline-variant/10">
+<div class="text-primary font-headline text-5xl font-extralight italic">1848</div>
+<div class="md:col-span-2">
+<h3 class="serif-display text-2xl text-on-surface">The Industrial Ledger</h3>
+<p class="text-on-surface-variant font-body text-sm mt-2">Expansion of administrative capacity during the height of the urban revolution.</p>
+</div>
+<div class="flex justify-end">
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+<!-- Timeline Item -->
+<div class="group grid grid-cols-1 md:grid-cols-4 items-center bg-surface-container-low hover:bg-surface-container-high transition-all duration-500 py-12 px-8 border-t border-outline-variant/10">
+<div class="text-primary font-headline text-5xl font-extralight italic">1914</div>
+<div class="md:col-span-2">
+<h3 class="serif-display text-2xl text-on-surface">Digital Precursors</h3>
+<p class="text-on-surface-variant font-body text-sm mt-2">The standardization of wartime documentation and bureaucratic acceleration.</p>
+</div>
+<div class="flex justify-end">
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Silver Hub Map: Cartographic Archive -->
+<section class="py-32 px-12 bg-surface">
+<div class="flex flex-col md:flex-row justify-between items-baseline mb-16">
+<div>
+<span class="text-secondary font-label text-[10px] tracking-widest uppercase">Cartographic</span>
+<h2 class="serif-display text-6xl mt-4">Silver Hub Map</h2>
+</div>
+<p class="max-w-md text-on-surface-variant text-right font-body italic text-sm">
+                    "Geography is history's theater. Explore the nodes where administrative power consolidated."
+                </p>
+</div>
+<div class="relative aspect-video w-full bg-surface-container overflow-hidden group">
+<div class="absolute inset-0 grayscale contrast-125 opacity-60">
+<img class="w-full h-full object-cover" data-alt="Detailed vintage monochrome topographic map of a historical European city center with intricate street patterns" data-location="Paris" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDV0dEFcGJ8u_Js5JL7wbiL2act-W2l8ObjmE0u_yvaWIhWaSJmPrwMUi0DoB7dheOhiL_updUhgXKdvbZO2e0q3ZcpKPrMZAodqrLKYRkuTXDvuLu0LJKNEhP_Rg5vcsrevUEcegpSkISFXc-UGNjahiReKAkZaq6CCqsoxOg94LkTwfTj_HkxbO976d1uP2LMYsoaFlk7juvYGy-gw9OXybo6e7ahZ-BpRjzmh0ahw6JUo-OXq2q_GFYGtgrOm6DF5QB-rJtDtw"/>
+</div>
+<!-- Interactive Nodes -->
+<div class="absolute top-1/4 left-1/3">
+<div class="relative flex items-center justify-center">
+<div class="absolute w-12 h-12 bg-primary/20 animate-pulse rounded-full"></div>
+<div class="w-2 h-2 bg-primary rounded-full z-10"></div>
+<div class="absolute left-6 glass-panel p-4 w-48 scale-0 group-hover:scale-100 transition-transform origin-left border border-outline-variant/20">
+<p class="text-[10px] text-primary uppercase tracking-tighter">Sector Alpha</p>
+<h4 class="serif-display text-lg">Central Archives</h4>
+<p class="text-[11px] text-on-surface-variant leading-tight mt-1">Foundational site of the first constitutional records.</p>
+</div>
+</div>
+</div>
+<div class="absolute bottom-1/3 right-1/4">
+<div class="relative flex items-center justify-center">
+<div class="absolute w-12 h-12 bg-secondary/20 animate-pulse rounded-full"></div>
+<div class="w-2 h-2 bg-secondary rounded-full z-10"></div>
+</div>
+</div>
+<!-- Curator's Loupe Sidebar -->
+<div class="absolute right-0 top-0 bottom-0 w-80 glass-panel border-l border-outline-variant/10 p-12 flex flex-col justify-between">
+<div>
+<h3 class="serif-display text-3xl mb-6">Archive Nodes</h3>
+<ul class="space-y-6">
+<li class="group cursor-pointer">
+<span class="block text-[10px] text-outline uppercase tracking-[0.2em] mb-1">01</span>
+<span class="block font-body text-on-surface group-hover:text-primary transition-colors">The Royal Mint Vaults</span>
+<div class="h-[1px] w-0 group-hover:w-full bg-primary transition-all duration-500 mt-2"></div>
+</li>
+<li class="group cursor-pointer">
+<span class="block text-[10px] text-outline uppercase tracking-[0.2em] mb-1">02</span>
+<span class="block font-body text-on-surface group-hover:text-primary transition-colors">Old Port Registries</span>
+<div class="h-[1px] w-0 group-hover:w-full bg-primary transition-all duration-500 mt-2"></div>
+</li>
+<li class="group cursor-pointer">
+<span class="block text-[10px] text-outline uppercase tracking-[0.2em] mb-1">03</span>
+<span class="block font-body text-on-surface group-hover:text-primary transition-colors">Parliamentary Library</span>
+<div class="h-[1px] w-0 group-hover:w-full bg-primary transition-all duration-500 mt-2"></div>
+</li>
+</ul>
+</div>
+<button class="w-full bg-primary text-on-primary py-4 font-label uppercase text-[12px] tracking-widest hover:bg-on-primary-fixed-variant transition-colors">
+                        Enter VR Gallery
+                    </button>
+</div>
+</div>
+</section>
+<!-- Interactive Quiz: The Scholar's Inquiry -->
+<section class="py-32 px-12 bg-surface-container-low">
+<div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
+<div class="relative">
+<div class="absolute -top-12 -left-12 w-64 h-64 bg-secondary/5 blur-[100px]"></div>
+<img class="w-full h-[600px] object-cover filter brightness-75 border border-outline-variant/10" data-alt="Macro of a scholar's desk with old fountain pen, spectacles, and weathered stack of papers under a soft warm lamp" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9ND6fsCARNPDhFNiIsvMtLQubA7UnfQFja29iet31UmodxJ9rWyk0hIFHyo-mNfVg0Dmk2ek6ILyLokCkNLEVVnvdBlvlMp1MTeGRNX4ULvzhr4t9qjy56mpgHaCZ4eo2Tmsbst0bX2Q1AsSTGt_TF7bjyCZRrAddRS6w00YVYNBOknN4xjyiVfA57jB_9uAMxd9Rz0aBhStDgBjb4EcQtya5VL9o-kVIJzPVwH5EZ8AQjhzMX5qRYd0KgiJzsRcXht4cLRpw8Q"/>
+<div class="absolute bottom-12 left-12 right-12 bg-surface p-8 border border-outline-variant/10">
+<span class="serif-display italic text-tertiary text-lg">"History is a set of lies agreed upon."</span>
+<p class="text-[10px] font-label uppercase tracking-widest text-outline mt-4">— Napoleon Bonaparte</p>
+</div>
+</div>
+<div>
+<span class="text-primary font-label text-[10px] tracking-widest uppercase mb-4 block">Interactive Knowledge</span>
+<h2 class="serif-display text-5xl mb-8 leading-tight">Test Your Curatorial Knowledge</h2>
+<div class="space-y-8 mt-12">
+<div>
+<p class="text-on-surface font-body mb-6 text-lg">Which document marked the beginning of modern individual identification in the 18th century?</p>
+<div class="space-y-3">
+<label class="flex items-center p-5 bg-surface-container hover:bg-surface-container-high transition-colors cursor-pointer group">
+<input class="form-radio text-primary bg-surface border-outline focus:ring-0" name="quiz" type="radio"/>
+<span class="ml-4 font-body text-on-surface-variant group-hover:text-on-surface transition-colors">The Napoleonic Code Registries</span>
+</label>
+<label class="flex items-center p-5 bg-surface-container hover:bg-surface-container-high transition-colors cursor-pointer group">
+<input class="form-radio text-primary bg-surface border-outline focus:ring-0" name="quiz" type="radio"/>
+<span class="ml-4 font-body text-on-surface-variant group-hover:text-on-surface transition-colors">The Magna Carta Appendix</span>
+</label>
+<label class="flex items-center p-5 bg-surface-container hover:bg-surface-container-high transition-colors cursor-pointer group">
+<input class="form-radio text-primary bg-surface border-outline focus:ring-0" name="quiz" type="radio"/>
+<span class="ml-4 font-body text-on-surface-variant group-hover:text-on-surface transition-colors">The Treaty of Westphalia Annex</span>
+</label>
+</div>
+</div>
+<button class="bg-primary text-on-primary px-12 py-4 font-label uppercase text-[12px] tracking-widest hover:bg-on-primary-fixed-variant transition-all hover:translate-y-[-2px] shadow-lg">
+                            Submit Inquiry
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Exhibits Preview: Digital Folios -->
+<section class="py-32 px-12 bg-surface">
+<div class="flex items-center gap-4 mb-16">
+<div class="h-[1px] flex-1 bg-outline-variant/20"></div>
+<h2 class="serif-display text-3xl px-8">Digital Folios</h2>
+<div class="h-[1px] flex-1 bg-outline-variant/20"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-1">
+<!-- Exhibit Card -->
+<div class="group relative aspect-[3/4] bg-surface-container-low overflow-hidden cursor-pointer">
+<img class="w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-700" data-alt="Historical architectural blueprint with faint ink lines on heavy textured cream paper" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOU2qNIrOAgJCYuBfZ15H4wSz1tTiLxQpUcSlx0FmHC5N3YYNptmd8JtOIuJhS5TdgKTz-ZA3p9q63KnakMPiNYYMO8S8ssKwHR5FHbUpDAwk_tf_q1pfGpBqzmXy2KThiKl_NIYgVAh23r-42KOzJaGiG0BRvX7m80cpLuqsOX5gZK31TVxNN2t0RP0uKjnF7WLR8ncbAbD_236uPXXRfS0EM6KE2UVo9b7jT3HumcO1s_1LMHKWvWa0wSph-gXZtghZDFcAzrg"/>
+<div class="absolute inset-0 p-12 flex flex-col justify-end bg-gradient-to-t from-surface to-transparent">
+<span class="text-primary font-label text-[10px] tracking-widest uppercase mb-2">Volume I</span>
+<h3 class="serif-display text-3xl group-hover:text-primary transition-colors">The Architecture of Control</h3>
+</div>
+</div>
+<!-- Exhibit Card -->
+<div class="group relative aspect-[3/4] bg-surface-container-low overflow-hidden cursor-pointer">
+<img class="w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-700" data-alt="Old leather-bound ledger open on a table showing dense rows of handwritten numbers and names" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgYN9O4Zb1JuOexyBs5hiBK_5hEUEkQxMNLOU96Jk7zHhejtcWwTOYU2xraL0iAmvcF4R4BAq-dIdzRebaqDMhI3T03tUafLV_Er0Cema78Gs-Y9JqJsXZJ9ai80dNHp_eKVacpQrNfm9lDADUCRTSLA4GEYUlmMB2fzAo461zsb6joJOQFp6NFIfxVk5WOIi7FXTBLKxW-k5vKlJWUCZmdZ0F9DlTKs3GxQw33MRhpo2zzKXTYydWblRZhl3KFz203xb-AnRm8Q"/>
+<div class="absolute inset-0 p-12 flex flex-col justify-end bg-gradient-to-t from-surface to-transparent">
+<span class="text-secondary font-label text-[10px] tracking-widest uppercase mb-2">Volume II</span>
+<h3 class="serif-display text-3xl group-hover:text-secondary transition-colors">Merchant Spirits</h3>
+</div>
+</div>
+<!-- Exhibit Card -->
+<div class="group relative aspect-[3/4] bg-surface-container-low overflow-hidden cursor-pointer">
+<img class="w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-700" data-alt="Close up of a row of antique dark green library books with gold leaf lettering on the spines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYlATbJy6n_DKVWUWsW9DG_ToB4fIljqtYVOG6IgDDTBK83v95lfmdlsvb0g0U-vE5vknyRSusQbqFeLQQUXFzeCGgltHlPbMPnDBoYXnaf2jvC6BCcvDR6QNKZ4vyJBPL8HjoKu4Svw_3DeQpgSRv8qWQ9yLWdPV-5K-OOFkFBQR8zM0uJXYRWmhck1HLespbEyFii3a97jHJtyBRTaPVzSUSdVbk30oLeS5Q3z4CC_Q0_7084gB5D2Vg8i8wrqgqqdZ7ifsrzw"/>
+<div class="absolute inset-0 p-12 flex flex-col justify-end bg-gradient-to-t from-surface to-transparent">
+<span class="text-tertiary font-label text-[10px] tracking-widest uppercase mb-2">Volume III</span>
+<h3 class="serif-display text-3xl group-hover:text-tertiary transition-colors">Lost Dialects</h3>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full flex flex-col md:flex-row justify-between items-center px-12 py-16 gap-8 bg-neutral-950 border-t border-neutral-800/10">
+<div class="text-lg font-serif italic text-amber-400">THE MODERN SCRIBE</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-sans manrope uppercase tracking-widest text-[10px] text-neutral-600 hover:text-neutral-300 transition-colors" href="#">Privacy</a>
+<a class="font-sans manrope uppercase tracking-widest text-[10px] text-neutral-600 hover:text-neutral-300 transition-colors" href="#">Terms</a>
+<a class="font-sans manrope uppercase tracking-widest text-[10px] text-neutral-600 hover:text-neutral-300 transition-colors" href="#">Institutional Access</a>
+<a class="font-sans manrope uppercase tracking-widest text-[10px] text-neutral-600 hover:text-neutral-300 transition-colors" href="#">Press Kit</a>
+</div>
+<div class="font-sans manrope uppercase tracking-widest text-[10px] text-neutral-600">
+            © 2024 THE MODERN SCRIBE. ALL RIGHTS RESERVED.
+        </div>
+</footer>
+<!-- Floating Action Button: Contextual for Exhibit -->
+<button class="fixed bottom-8 right-8 w-16 h-16 bg-primary text-on-primary flex items-center justify-center shadow-2xl hover:scale-105 transition-transform z-40 group">
+<span class="material-symbols-outlined scale-125" data-icon="book_2">book_2</span>
+<div class="absolute right-20 bg-surface px-4 py-2 opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap border border-outline-variant/20">
+<span class="font-label text-[10px] uppercase tracking-widest">Catalog Access</span>
+</div>
+</button>
+</body></html>

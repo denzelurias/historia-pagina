@@ -1,3 +1,37 @@
+const root = document.documentElement;
+const themeToggle = document.querySelector(".theme-toggle");
+const themeToggleLabel = document.querySelector(".theme-toggle-label");
+const themeColorMeta = document.querySelector('meta[name="theme-color"]');
+const THEME_STORAGE_KEY = "site-theme-v2";
+
+function applyTheme(theme) {
+  const nextTheme = theme === "light" ? "light" : "dark";
+  root.setAttribute("data-theme", nextTheme);
+
+  if (themeToggle) {
+    const isDark = nextTheme === "dark";
+    themeToggle.setAttribute("aria-pressed", String(isDark));
+    if (themeToggleLabel) {
+      themeToggleLabel.textContent = isDark ? "Modo oscuro" : "Modo claro";
+    }
+  }
+
+  if (themeColorMeta) {
+    themeColorMeta.setAttribute("content", nextTheme === "dark" ? "#131313" : "#f7f2e8");
+  }
+}
+
+const savedTheme = localStorage.getItem(THEME_STORAGE_KEY);
+applyTheme(savedTheme || "light");
+
+if (themeToggle) {
+  themeToggle.addEventListener("click", () => {
+    const nextTheme = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    localStorage.setItem(THEME_STORAGE_KEY, nextTheme);
+    applyTheme(nextTheme);
+  });
+}
+
 const siteNav = document.querySelector(".site-nav");
 const menuToggle = document.querySelector(".menu-toggle");
 const navLinks = document.querySelectorAll(".nav-links a");
