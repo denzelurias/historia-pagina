@@ -15,6 +15,11 @@
       href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600;6..72,700&family=Manrope:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -22,6 +27,20 @@
 
     <header class="site-header">
       <nav class="site-nav container" aria-label="Navegación principal">
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="menu-principal"
+        >
+          <span class="menu-toggle-icon" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+          <span class="menu-toggle-label">Recorrido</span>
+        </button>
+
         <a class="brand" href="#inicio">
           <span class="brand-mark" aria-hidden="true"></span>
           <span class="brand-text">
@@ -30,16 +49,41 @@
           </span>
         </a>
 
-        <button
-          class="menu-toggle"
-          type="button"
-          aria-expanded="false"
-          aria-controls="menu-principal"
-        >
-          Menú
-        </button>
+        <div class="nav-actions">
+          <button
+            class="theme-toggle"
+            type="button"
+            aria-pressed="false"
+            aria-label="Cambiar tema de color"
+          >
+            <span class="theme-toggle-dot" aria-hidden="true"></span>
+            <span class="theme-toggle-label">Modo claro</span>
+          </button>
+        </div>
+      </nav>
 
-        <div class="nav-links" id="menu-principal">
+      <div class="reading-progress" aria-hidden="true">
+        <span class="reading-progress-bar"></span>
+      </div>
+
+      <div class="menu-overlay" aria-hidden="true"></div>
+
+      <aside
+        class="menu-drawer"
+        id="menu-principal"
+        aria-label="Secciones del sitio"
+        aria-hidden="true"
+      >
+        <div class="menu-drawer-head">
+          <div>
+            <p class="eyebrow">Navegación</p>
+            <h2>Explora el recorrido</h2>
+          </div>
+          <button class="menu-close" type="button" aria-label="Cerrar menú">Cerrar</button>
+        </div>
+
+        <div class="menu-links">
+          <a href="#inicio">Inicio</a>
           <a href="#linea-del-tiempo">Línea del tiempo</a>
           <a href="#prehispanico">Culturas prehispánicas</a>
           <a href="#conquista">Conquista</a>
@@ -49,20 +93,17 @@
           <a href="#misiones">Misiones jesuíticas</a>
           <a href="#independencia">Independencia</a>
           <a href="#fuentes">Fuentes</a>
+          <a href="quiz.html">Cuestionario extendido</a>
         </div>
 
-        <div class="nav-actions">
-          <button
-            class="theme-toggle"
-            type="button"
-            aria-pressed="true"
-            aria-label="Cambiar tema de color"
-          >
-            <span class="theme-toggle-dot" aria-hidden="true"></span>
-            <span class="theme-toggle-label">Modo claro</span>
-          </button>
+        <div class="menu-drawer-footer">
+          <p>
+            Usa este menú para moverte por el museo digital y abrir el
+            cuestionario final en una página aparte.
+          </p>
+          <a class="button button-primary" href="quiz.html">Ir al cuestionario</a>
         </div>
-      </nav>
+      </aside>
     </header>
 
     <main id="contenido">
@@ -602,29 +643,41 @@
                 <figcaption>Las rutas de intercambio convirtieron al virreinato en un punto de conexión entre continentes.</figcaption>
               </figure>
 
-              <div class="route-map" aria-label="Esquema simplificado de rutas novohispanas">
-                <div class="route-node route-node-top-left">
-                  <strong>Sevilla</strong>
-                  <span>Carrera de Indias</span>
+              <div class="route-map" aria-labelledby="route-map-title">
+                <div
+                  class="route-map-canvas"
+                  id="route-map-canvas"
+                  aria-label="Mapa interactivo de nodos de la Nueva España global"
+                ></div>
+                <div class="route-map-panel">
+                  <p class="card-kicker">Mapa interactivo</p>
+                  <h3 id="route-map-title">Puertos, capitales y rutas de un virreinato conectado</h3>
+                  <p>
+                    Arrastra el mapa y toca los puntos para ver cómo Sevilla,
+                    Veracruz, Ciudad de México, Acapulco y Manila formaron parte
+                    de una misma red imperial.
+                  </p>
+                  <div class="route-links">
+                    <a
+                      href="https://www.openstreetmap.org/#map=2/20/-35"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Abrir en OpenStreetMap
+                    </a>
+                  </div>
+                  <ul class="route-key">
+                    <li><strong>Sevilla</strong><span>Atlántico imperial</span></li>
+                    <li><strong>Veracruz</strong><span>Entrada marítima a la Nueva España</span></li>
+                    <li><strong>Ciudad de México</strong><span>Centro administrativo y comercial</span></li>
+                    <li><strong>Acapulco</strong><span>Puerta novohispana del Pacífico</span></li>
+                    <li><strong>Manila</strong><span>Vínculo asiático del galeón</span></li>
+                  </ul>
                 </div>
-                <div class="route-node route-node-center">
-                  <strong>Veracruz</strong>
-                  <span>Entrada atlántica</span>
+                <div class="route-map-fallback">
+                  Si el mapa no carga, esta lámina sigue marcando el enlace entre
+                  el Atlántico, el Pacífico y el interior novohispano.
                 </div>
-                <div class="route-node route-node-bottom-left">
-                  <strong>Ciudad de México</strong>
-                  <span>Centro político y comercial</span>
-                </div>
-                <div class="route-node route-node-bottom-right">
-                  <strong>Acapulco</strong>
-                  <span>Puerta del Pacífico</span>
-                </div>
-                <div class="route-node route-node-top-right">
-                  <strong>Manila</strong>
-                  <span>Conexión asiática</span>
-                </div>
-                <div class="route-label route-label-atlantic">Atlántico</div>
-                <div class="route-label route-label-pacific">Pacífico</div>
               </div>
             </div>
 
@@ -1005,34 +1058,23 @@
               </article>
             </div>
 
-            <aside class="quiz-card" aria-labelledby="quiz-title">
+            <aside class="quiz-card quiz-card-portal" aria-labelledby="quiz-portal-title">
               <p class="card-kicker">Cierre interactivo</p>
-              <h3 id="quiz-title">Tres preguntas para repasar el recorrido</h3>
-              <form class="quiz-form" id="quiz-form">
-                <fieldset>
-                  <legend>1. ¿Qué idea resume mejor la Nueva España global?</legend>
-                  <label><input type="radio" name="q1" value="a" /> Fue un territorio aislado del comercio asiático.</label>
-                  <label><input type="radio" name="q1" value="b" /> Fue un nodo que conectó el Atlántico y el Pacífico.</label>
-                  <label><input type="radio" name="q1" value="c" /> Solo dependió del intercambio interno rural.</label>
-                </fieldset>
-
-                <fieldset>
-                  <legend>2. Valladolid fue importante porque...</legend>
-                  <label><input type="radio" name="q2" value="a" /> convirtió la conquista en un problema moral y jurídico.</label>
-                  <label><input type="radio" name="q2" value="b" /> eliminó de inmediato el sistema colonial.</label>
-                  <label><input type="radio" name="q2" value="c" /> prohibió toda forma de evangelización.</label>
-                </fieldset>
-
-                <fieldset>
-                  <legend>3. ¿La independencia significó automáticamente igualdad social?</legend>
-                  <label><input type="radio" name="q3" value="a" /> Sí, porque desaparecieron las herencias coloniales.</label>
-                  <label><input type="radio" name="q3" value="b" /> No, porque la república arrastró viejas desigualdades.</label>
-                  <label><input type="radio" name="q3" value="c" /> Sí, porque todas las regiones aceptaron el mismo proyecto.</label>
-                </fieldset>
-
-                <button class="button button-primary" type="submit">Revisar respuestas</button>
-                <p class="quiz-result" id="quiz-result" aria-live="polite"></p>
-              </form>
+              <h3 id="quiz-portal-title">Continúa en el cuestionario extendido del sitio</h3>
+              <p>
+                El repaso final ahora vive en una página propia para que puedas
+                responder con más calma, recorrer ocho preguntas y volver al
+                contenido principal cuando quieras.
+              </p>
+              <ul class="quiz-preview-list">
+                <li>Incluye preguntas sobre Mesoamérica, conquista, rutas globales y república.</li>
+                <li>Conserva la misma estética editorial del resto del recorrido.</li>
+                <li>Permite regresar de inmediato a esta sección o al inicio del museo digital.</li>
+              </ul>
+              <div class="hero-actions quiz-portal-actions">
+                <a class="button button-primary" href="quiz.html">Abrir cuestionario</a>
+                <a class="button button-secondary" href="#fuentes">Revisar fuentes</a>
+              </div>
             </aside>
           </div>
         </div>
@@ -1085,6 +1127,10 @@
       </div>
     </footer>
 
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="script.js"></script>
   </body>
 </html>

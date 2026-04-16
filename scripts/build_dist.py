@@ -27,6 +27,7 @@ def main() -> int:
 
     for relative in [
         Path("index.html"),
+        Path("quiz.html"),
         Path("styles.css"),
         Path("script.js"),
         Path(".nojekyll"),
