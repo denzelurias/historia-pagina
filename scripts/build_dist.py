@@ -32,6 +32,7 @@ def main() -> int:
         Path("script.js"),
         Path(".nojekyll"),
         Path("assets/illustrations"),
+        Path("assets/leaflet"),
     ]:
         copy_path(ROOT / relative, DIST / relative)
 

@@ -293,6 +293,14 @@ function initializeRouteMap() {
     return;
   }
 
+  // Ensure the canvas has explicit pixel dimensions before Leaflet initializes,
+  // because position:absolute/inset:0 alone may resolve to 0×0 during JS execution.
+  const parentRect = routeMap ? routeMap.getBoundingClientRect() : null;
+  if (parentRect && parentRect.height > 0) {
+    routeMapCanvas.style.width = parentRect.width + "px";
+    routeMapCanvas.style.height = parentRect.height + "px";
+  }
+
   const primaryColor = getComputedStyle(root).getPropertyValue("--primary").trim() || "#b1771b";
   const surfaceColor = getComputedStyle(root).getPropertyValue("--surface").trim() || "#f7f2e8";
   const textColor = getComputedStyle(root).getPropertyValue("--text").trim() || "#18130e";
@@ -405,7 +413,26 @@ function initializeRouteMap() {
     window.L.latLngBounds(markers.map((marker) => marker.coordinates)).pad(0.26)
   );
 
+  // Force Leaflet to recalculate tile grid after fitBounds settles.
+  window.requestAnimationFrame(function () {
+    map.invalidateSize({ animate: false });
+  });
+
   routeMap?.classList.add("is-loaded");
+
+  // Also invalidate when the map section scrolls into view for the first time,
+  // in case it was off-screen during initialization.
+  if (routeMap && window.IntersectionObserver) {
+    const sizeObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          map.invalidateSize({ animate: false });
+          sizeObserver.disconnect();
+        }
+      });
+    }, { threshold: 0.1 });
+    sizeObserver.observe(routeMap);
+  }
 }
 
 if (routeMapCanvas) {
